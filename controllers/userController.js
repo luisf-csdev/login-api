@@ -135,7 +135,7 @@
 //     login: async function login(req, res) {
 //         const selectedUser = await User.findOne({email: req.body.email});
 //         if (!selectedUser) return res.status(400).send('Email or password incorrect');
-    
+
 //         const passwordMatch = bcrypt.compareSync(req.body.password, selectedUser.password)
 //         if(!passwordMatch) return res.status(400).send('Email or password incorrect');
 
@@ -155,7 +155,7 @@ const jwt = require('jsonwebtoken');
 const userController = {
 
     register: async function register(req, res) {
-        const selectedUser = await User.findOne({email: req.body.email});
+        const selectedUser = await User.findOne({ email: req.body.email });
         if (selectedUser) return res.status(400).send('Email already exists');
 
         const user = new User({
@@ -164,7 +164,7 @@ const userController = {
             password: bcrypt.hashSync(req.body.password)
         })
 
-        try{
+        try {
             const savedUser = await user.save();
             res.send(savedUser);
         } catch (error) {
@@ -173,13 +173,13 @@ const userController = {
     },
 
     login: async function login(req, res) {
-        const selectedUser = await User.findOne({email: req.body.email});
+        const selectedUser = await User.findOne({ email: req.body.email });
         if (!selectedUser) return res.status(400).send('Email or password incorrect');
-    
-        const passwordMatch = bcrypt.compareSync(req.body.password, selectedUser.password)
-        if(!passwordMatch) return res.status(400).send('Email or password incorrect');
 
-        const token = jwt.sign({_id: selectedUser._id}, process.env.TOKEN_SECRET);
+        const passwordMatch = bcrypt.compareSync(req.body.password, selectedUser.password)
+        if (!passwordMatch) return res.status(400).send('Email or password incorrect');
+
+        const token = jwt.sign({ _id: selectedUser._id, admin: selectedUser.admin }, process.env.TOKEN_SECRET);
 
         res.header('authorization-token', token);
         res.send('User Logged');
