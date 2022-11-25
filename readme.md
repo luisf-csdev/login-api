@@ -15,7 +15,7 @@
     <a href="#-prerequisites">Prerequisites</a> •
     <a href="#-clone-repository">Clone Repository</a> •
     <a href="#-routes">Routes</a> •
-    <a href="#-json-models">JSON Models</a> •
+    <a href="#-json">JSON</a> •
     <a href="#-stacks">Stacks</a> •
     <a href="#excelsior-code--by-luís-felipe">Author</a>
 </h4>
@@ -77,7 +77,7 @@ npm run nodemon
 ```
 <br>
 
-## 🛣️ Routes
+## 🛣 Routes
 ### POST
 - /login
 - /register
@@ -86,7 +86,7 @@ npm run nodemon
 - /user/admin
 <br>
 
-## ✨ JSON Models
+## ✨ JSON
 ### REGISTER
 ```JSON
 {
