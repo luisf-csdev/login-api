@@ -2,11 +2,12 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose')
-const login = require('./routes/login')
-const register = require('./routes/register')
-const userRouter = require('./routes/userRouter')
-const PORT = process.env.PORT || 5000;
+const mongoose = require('mongoose');
+const welcome = require('./routes/welcome');
+const login = require('./routes/login');
+const register = require('./routes/register');
+const userRouter = require('./routes/userRouter');
+const PORT = process.env.PORT || 8080;
 
 mongoose.connect(process.env.MONGODB_URI,
     {
@@ -15,11 +16,12 @@ mongoose.connect(process.env.MONGODB_URI,
     },
     (error) => {
         if (error)
-            console.log(error)
+            console.log(error);
         else
-            console.log('Mongo Connected')
+            console.log('Mongo Connected');
     })
 
+app.get('/', express.json(), welcome);
 app.post('/login', express.json(), login);
 app.post('/register', express.json(), register);
 app.use('/user', express.json(), userRouter);
