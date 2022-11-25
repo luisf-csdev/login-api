@@ -45,14 +45,14 @@
 <br>
 
 ## 💾 Prerequisites
-You'll need have a database inside a project on the MongoDB Cloud and connect to obtain the Mongo URI:
+You'll need to have a database inside a project on the MongoDB Cloud and connect to obtain the Mongo URI:
 - [MongoDB Cloud](https://cloud.mongodb.com/)
 
 Then you'll need to have the following tools installed on your machine:
 - [GIT](https://git-scm.com/)
 - [Node.js](https://nodejs.org/)
 
-Also, use your preferred code editor.
+Also, use your preferred code editor and REST client.
 <br>
 
 ## 🪢 Clone Repository
