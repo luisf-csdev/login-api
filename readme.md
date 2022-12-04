@@ -108,8 +108,8 @@ npm run nodemon
 ## 💽 Stacks
 <span>
     <img alt="luisf-react" height="70rem" width="100rem" 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
-        <a href='https://reactjs.org/'>React</a>
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+        <a href='https://www.javascript.com/'>JavaScript</a>
     <img alt="luisf-node" height="70rem" width="100rem" 
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
         <a href='https://nodejs.org/'>Node.js</a>
